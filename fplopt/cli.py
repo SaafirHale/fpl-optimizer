@@ -86,7 +86,7 @@ def cmd_project(a) -> None:
 
 def _settings(a, ctx, **kw) -> Settings:
     return Settings(gws=ctx.gws, chips=parse_chips(a.chip), decay=a.decay, ft_value=a.ft_value,
-                    time_limit=a.time_limit, **kw)
+                    hit_margin=a.hit_margin, time_limit=a.time_limit, **kw)
 
 
 def cmd_squad(a) -> None:
@@ -230,6 +230,8 @@ def main(argv: list[str] | None = None) -> None:
         p.add_argument("--chip", action="append", help="play a chip, e.g. wildcard@10, fh@12, bb@14, tc@11")
         p.add_argument("--decay", type=float, default=0.9, help="weight of each later gameweek")
         p.add_argument("--ft-value", type=float, default=1.5, help="points per free transfer banked at the end")
+        p.add_argument("--hit-margin", type=float, default=8.0,
+                       help="extra objective cost per -4 hit (default chosen by replaying 2024/25)")
         p.add_argument("--time-limit", type=int, default=60)
         p.add_argument("--no-why", action="store_true", help="skip the counterfactual re-solves")
         p.add_argument("--html", help="also write an HTML report to this path")

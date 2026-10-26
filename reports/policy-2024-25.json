@@ -1,0 +1,47 @@
+{
+  "season": "2024-25",
+  "best": {
+    "hit_margin": 8.0,
+    "ft_value": 1.5,
+    "total": 2415,
+    "hits": 0,
+    "transfers": 36
+  },
+  "runs": [
+    {
+      "hit_margin": 0.0,
+      "ft_value": 1.5,
+      "total": 2379,
+      "hits": 7,
+      "transfers": 44
+    },
+    {
+      "hit_margin": 2.0,
+      "ft_value": 1.5,
+      "total": 2333,
+      "hits": 2,
+      "transfers": 39
+    },
+    {
+      "hit_margin": 4.0,
+      "ft_value": 1.5,
+      "total": 2306,
+      "hits": 0,
+      "transfers": 37
+    },
+    {
+      "hit_margin": 8.0,
+      "ft_value": 1.5,
+      "total": 2415,
+      "hits": 0,
+      "transfers": 36
+    },
+    {
+      "hit_margin": 4.0,
+      "ft_value": 3.0,
+      "total": 2387,
+      "hits": 0,
+      "transfers": 33
+    }
+  ]
+}

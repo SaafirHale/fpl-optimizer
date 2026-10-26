@@ -179,11 +179,16 @@ def save(results: list[Result], out: Path = ROOT / "reports") -> None:
 if __name__ == "__main__":
     import sys
 
+    # usage: python -m fplopt.simulate 2025-26 model form   (policy from reports/policy-2024-25.json)
     season = sys.argv[1] if len(sys.argv) > 1 else "2025-26"
     strategies = sys.argv[2:] or ["model", "form"]
+    pol_file = ROOT / "reports" / "policy-2024-25.json"
+    best = json.loads(pol_file.read_text())["best"] if pol_file.exists() else {}
+    policy = {k: best[k] for k in ("hit_margin", "ft_value") if k in best}
+    print("policy chosen on 2024/25:", policy)
     rs = []
     for s in strategies:
-        rs.append(run(season, s))
+        rs.append(run(season, s, **policy))
         save(rs)
     for r in rs:
         print(r.strategy, r.total, "hits", sum(w.hits for w in r.weeks))

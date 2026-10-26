@@ -1,0 +1,349 @@
+{
+  "season": "2025-26",
+  "strategy": "form",
+  "total": 1894,
+  "weeks": [
+    {
+      "gw": 1,
+      "points": 50,
+      "hits": 0,
+      "transfers": 0,
+      "captain": "M.Salah",
+      "autosubs": 2,
+      "bank": 0
+    },
+    {
+      "gw": 2,
+      "points": 17,
+      "hits": 7,
+      "transfers": 8,
+      "captain": "Ballard",
+      "autosubs": 0,
+      "bank": 0
+    },
+    {
+      "gw": 3,
+      "points": 42,
+      "hits": 0,
+      "transfers": 1,
+      "captain": "Calafiori",
+      "autosubs": 1,
+      "bank": 13
+    },
+    {
+      "gw": 4,
+      "points": 65,
+      "hits": 0,
+      "transfers": 1,
+      "captain": "Calafiori",
+      "autosubs": 0,
+      "bank": 6
+    },
+    {
+      "gw": 5,
+      "points": 63,
+      "hits": 0,
+      "transfers": 1,
+      "captain": "Haaland",
+      "autosubs": 0,
+      "bank": 11
+    },
+    {
+      "gw": 6,
+      "points": 59,
+      "hits": 0,
+      "transfers": 1,
+      "captain": "Senesi",
+      "autosubs": 0,
+      "bank": 13
+    },
+    {
+      "gw": 7,
+      "points": 66,
+      "hits": 0,
+      "transfers": 1,
+      "captain": "Haaland",
+      "autosubs": 1,
+      "bank": 18
+    },
+    {
+      "gw": 8,
+      "points": 74,
+      "hits": 0,
+      "transfers": 1,
+      "captain": "Haaland",
+      "autosubs": 0,
+      "bank": 11
+    },
+    {
+      "gw": 9,
+      "points": 47,
+      "hits": 0,
+      "transfers": 1,
+      "captain": "Haaland",
+      "autosubs": 1,
+      "bank": 21
+    },
+    {
+      "gw": 10,
+      "points": 64,
+      "hits": 0,
+      "transfers": 1,
+      "captain": "Gabriel",
+      "autosubs": 1,
+      "bank": 80
+    },
+    {
+      "gw": 11,
+      "points": 46,
+      "hits": 0,
+      "transfers": 1,
+      "captain": "Gabriel",
+      "autosubs": 1,
+      "bank": 70
+    },
+    {
+      "gw": 12,
+      "points": 36,
+      "hits": 0,
+      "transfers": 1,
+      "captain": "Gabriel",
+      "autosubs": 1,
+      "bank": 54
+    },
+    {
+      "gw": 13,
+      "points": 21,
+      "hits": 1,
+      "transfers": 2,
+      "captain": "Eze",
+      "autosubs": 1,
+      "bank": 42
+    },
+    {
+      "gw": 14,
+      "points": 59,
+      "hits": 0,
+      "transfers": 1,
+      "captain": "Keane",
+      "autosubs": 2,
+      "bank": 37
+    },
+    {
+      "gw": 15,
+      "points": 53,
+      "hits": 1,
+      "transfers": 2,
+      "captain": "Foden",
+      "autosubs": 1,
+      "bank": 39
+    },
+    {
+      "gw": 16,
+      "points": 50,
+      "hits": 0,
+      "transfers": 1,
+      "captain": "Foden",
+      "autosubs": 2,
+      "bank": 38
+    },
+    {
+      "gw": 17,
+      "points": 60,
+      "hits": 1,
+      "transfers": 2,
+      "captain": "Foden",
+      "autosubs": 3,
+      "bank": 37
+    },
+    {
+      "gw": 18,
+      "points": 39,
+      "hits": 0,
+      "transfers": 1,
+      "captain": "Haaland",
+      "autosubs": 3,
+      "bank": 19
+    },
+    {
+      "gw": 19,
+      "points": 32,
+      "hits": 0,
+      "transfers": 1,
+      "captain": "Ekitik\u00e9",
+      "autosubs": 1,
+      "bank": 0
+    },
+    {
+      "gw": 20,
+      "points": 20,
+      "hits": 1,
+      "transfers": 2,
+      "captain": "Lewis-Potter",
+      "autosubs": 2,
+      "bank": 4
+    },
+    {
+      "gw": 21,
+      "points": 49,
+      "hits": 1,
+      "transfers": 2,
+      "captain": "Rice",
+      "autosubs": 1,
+      "bank": 2
+    },
+    {
+      "gw": 22,
+      "points": 24,
+      "hits": 2,
+      "transfers": 3,
+      "captain": "Collins",
+      "autosubs": 2,
+      "bank": 32
+    },
+    {
+      "gw": 23,
+      "points": 38,
+      "hits": 0,
+      "transfers": 1,
+      "captain": "Gabriel",
+      "autosubs": 1,
+      "bank": 9
+    },
+    {
+      "gw": 24,
+      "points": 35,
+      "hits": 0,
+      "transfers": 1,
+      "captain": "Thiago",
+      "autosubs": 2,
+      "bank": 13
+    },
+    {
+      "gw": 25,
+      "points": 68,
+      "hits": 0,
+      "transfers": 1,
+      "captain": "Jo\u00e3o Pedro",
+      "autosubs": 1,
+      "bank": 82
+    },
+    {
+      "gw": 26,
+      "points": 59,
+      "hits": 0,
+      "transfers": 1,
+      "captain": "Gabriel",
+      "autosubs": 1,
+      "bank": 95
+    },
+    {
+      "gw": 27,
+      "points": 44,
+      "hits": 0,
+      "transfers": 1,
+      "captain": "Jo\u00e3o Pedro",
+      "autosubs": 0,
+      "bank": 58
+    },
+    {
+      "gw": 28,
+      "points": 54,
+      "hits": 0,
+      "transfers": 1,
+      "captain": "Palmer",
+      "autosubs": 1,
+      "bank": 50
+    },
+    {
+      "gw": 29,
+      "points": 69,
+      "hits": 0,
+      "transfers": 1,
+      "captain": "O'Reilly",
+      "autosubs": 2,
+      "bank": 38
+    },
+    {
+      "gw": 30,
+      "points": 43,
+      "hits": 0,
+      "transfers": 1,
+      "captain": "Jo\u00e3o Pedro",
+      "autosubs": 1,
+      "bank": 48
+    },
+    {
+      "gw": 31,
+      "points": 31,
+      "hits": 1,
+      "transfers": 2,
+      "captain": "Senesi",
+      "autosubs": 0,
+      "bank": 48
+    },
+    {
+      "gw": 32,
+      "points": 56,
+      "hits": 0,
+      "transfers": 1,
+      "captain": "B.Fernandes",
+      "autosubs": 0,
+      "bank": 0
+    },
+    {
+      "gw": 33,
+      "points": 67,
+      "hits": 0,
+      "transfers": 1,
+      "captain": "Truffert",
+      "autosubs": 1,
+      "bank": 18
+    },
+    {
+      "gw": 34,
+      "points": 53,
+      "hits": 0,
+      "transfers": 1,
+      "captain": "Mavropanos",
+      "autosubs": 0,
+      "bank": 6
+    },
+    {
+      "gw": 35,
+      "points": 55,
+      "hits": 0,
+      "transfers": 1,
+      "captain": "Gibbs-White",
+      "autosubs": 0,
+      "bank": 31
+    },
+    {
+      "gw": 36,
+      "points": 85,
+      "hits": 0,
+      "transfers": 1,
+      "captain": "Doku",
+      "autosubs": 1,
+      "bank": 69
+    },
+    {
+      "gw": 37,
+      "points": 59,
+      "hits": 0,
+      "transfers": 1,
+      "captain": "Gibbs-White",
+      "autosubs": 1,
+      "bank": 72
+    },
+    {
+      "gw": 38,
+      "points": 42,
+      "hits": 0,
+      "transfers": 1,
+      "captain": "Anderson",
+      "autosubs": 2,
+      "bank": 87
+    }
+  ]
+}

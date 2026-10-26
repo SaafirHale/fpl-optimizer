@@ -89,15 +89,22 @@ def main():
                 "and free transfers forward. GW1 is a free draft on GBP 100m. Each week is scored on real points "
                 "with automatic substitutions and the vice-captain rule. No chips are played. \"Form\" is the same "
                 "solver fed the naive form projection.", "",
-                "| Projections | Season points | Hits taken | Transfers | Best week | Worst week |",
-                "|---|---:|---:|---:|---:|---:|"]
+                "| Projections | Season points | Before hits | Hits taken | Transfers | Best week | Worst week |",
+                "|---|---:|---:|---:|---:|---:|---:|"]
         for k, s in sims.items():
             if s:
                 pts = [w["points"] for w in s["weeks"]]
-                out.append(f"| {'This model' if k == 'model' else 'Form'} | {s['total']:,} | "
+                gross = s["total"] + 4 * sum(w["hits"] for w in s["weeks"])
+                out.append(f"| {'This model' if k == 'model' else 'Form'} | {s['total']:,} | {gross:,} | "
                            f"{sum(w['hits'] for w in s['weeks'])} | {sum(w['transfers'] for w in s['weeks'])} | "
                            f"{max(pts)} | {min(pts)} |")
-        out += ["", "This compares the projections inside the same decision engine. It is not a comparison with "
+        sens = {k: load(f"sensitivity-margin0-2025-26-{k}.json") for k in ("model", "form")}
+        if all(sens.values()):
+            out += ["", f"Sensitivity: with no extra hit cost (the policy before tuning), the same replay scored "
+                    f"{sens['model']['total']:,} with the model ({sum(w['hits'] for w in sens['model']['weeks'])} hits) "
+                    f"and {sens['form']['total']:,} with form ({sum(w['hits'] for w in sens['form']['weeks'])} hits)."]
+        out += ["", "Noisy projections make the solver chase every swing, so much of the gap is hits; the "
+                "\"before hits\" column shows the gap without them. This compares the projections inside the same decision engine. It is not a comparison with "
                 "real managers: the public data has no 2025/26 average manager score.", ""]
     if policy:
         out += ["## Transfer policy (chosen on 2024/25)", "",
@@ -106,13 +113,17 @@ def main():
         out += [f"| {r['hit_margin']:g} | {r['ft_value']:g} | {r['total']:,} | {r['hits']} | {r['transfers']} |"
                 for r in policy["runs"]]
         b = policy["best"]
-        out += ["", f"Chosen: extra hit cost {b['hit_margin']:g}, banked-transfer value {b['ft_value']:g}.", ""]
+        out += ["", f"Chosen: extra hit cost {b['hit_margin']:g}, banked-transfer value {b['ft_value']:g}. The totals do "
+                "not move in one direction as hit aversion rises, so the choice is partly noise. It is the 2024/25 "
+                "maximum, taken mechanically by the script. The zero-margin 2025/26 run in the sensitivity line was "
+                "made while tuning was still running and played no part in the choice.", ""]
     if tune:
         b = tune["best_score"]
         start = tune["log"][0]
         out += ["## Hyperparameters (chosen on 2024/25)", "",
                 f"Coordinate search over {len(tune['log'])} settings moved validation RMSE from "
-                f"{f(start['rmse'])} to {f(b['rmse'])}. Nearly all of the gain came from the minutes model "
+                f"{f(start['rmse'])} to {f(b['rmse'])} ({f((val or {}).get('model', {}).get('rmse', float('nan')))} with the "
+                "final settings below). Nearly all of the gain came from the minutes model "
                 "reacting faster (recency decay 0.6, prior worth one match). Shrinkage of 450 vs 900 prior "
                 "minutes differed by less than 0.001 RMSE, so Valuo's 900 is kept.", ""]
     out += ["## Limitations", "",

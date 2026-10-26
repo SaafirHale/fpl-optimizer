@@ -18,6 +18,13 @@ Projections are backtested walk-forward on a hold-out season. See
 Against FPL's own expected points (the snapshot recorded before each deadline, on the 7,452
 rows of 2025/26 where the dataset has one): RMSE 1.936 vs 2.197, r 0.575 vs 0.478.
 
+**Season replay.** The optimizer played every week of 2025/26, using only data from before
+each deadline, with squad, bank, selling prices and free transfers carried forward and real
+points scored. It finished on 2,005 points with the model, against 1,894 for the same solver
+fed form projections. It used the transfer policy chosen on 2024/25 (an extra 8-point
+penalty per hit inside the objective). The untuned policy scored higher on 2025/26 (2,059
+with 10 hits), and the report says so.
+
 The model does not win everything. On 2025/26 its single top pick per gameweek averaged 5.74
 real points, against 6.26 for "highest points per match so far". MAE is close for every
 method (1.048 vs 1.058 and 1.075), because most player-gameweeks score 0 or 1. The report

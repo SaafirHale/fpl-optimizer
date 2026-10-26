@@ -32,6 +32,12 @@ points recorded before each deadline, it scored RMSE 1.936 vs 2.197 on the 7,452
 FPL's number exists. It does not win everything: its top pick each week averaged 5.74 real
 points, behind 6.26 for "highest points per match so far".
 
+I also replayed the whole of 2025/26 through the optimizer, deadline by deadline, carrying
+the squad, bank, selling prices and free transfers forward and scoring real points with
+automatic substitutions. The squad finished on 2,005 points, against 1,894 for the same solver
+fed recent-form projections. The transfer policy was chosen on 2024/25. It turned out
+slightly worse on the hold-out season than the untuned one (2,059), and the report shows both.
+
 One finding mattered more than any tuning. The public dataset's same-week FPL xP column looks
 like the obvious benchmark, but it was recorded after each gameweek. Its correlation with
 points on 2024/25 drops from 0.731 for the week it is labelled with to 0.479 for the next week. Honest
