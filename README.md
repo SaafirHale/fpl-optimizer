@@ -91,7 +91,9 @@ fplopt backtest 2024-25 2025-26
   transfer history and replays free transfers week by week; `--ft` overrides the count.
   Chips play as scenarios: `--chip wildcard@10`, `fh@12`, `bb@14`, `tc@11`.
 - `chips` solves every available chip in every planned week and ranks the gain over the
-  no-chip plan.
+  no-chip plan. Banked free transfers are modelled as kept, not increased, through a Wildcard
+  or Free Hit week. That forgoes the week's extra transfer, so a Wildcard or Free Hit that
+  changes little can show a small negative gain.
 
 Data is cached in `data/cache/` with a time-to-live, and live requests are spaced 1.5 s
 apart. A cold refresh is about ten requests: `bootstrap-static`, `fixtures`, and one

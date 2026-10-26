@@ -176,6 +176,9 @@ def cmd_chips(a) -> None:
             w = next(x for x in p.weeks if x.gw == gw)
             rows.append({"chip": chip, "gw": gw, "gain": p.objective - base.objective, "week_xp": w.xp,
                          "moves": len(w.transfers_in)})
+    if not rows:
+        print(f"No chips left to play in GW{ctx.gws[0]}-{ctx.gws[-1]}.")
+        return
     df = pd.DataFrame(rows).sort_values("gain", ascending=False)
     df["gain"] = df.gain.map(lambda v: f"{v:+.2f}")
     df["week_xp"] = df.week_xp.map(lambda v: f"{v:.1f}")
