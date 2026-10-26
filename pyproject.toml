@@ -1,0 +1,29 @@
+[project]
+name = "fpl-optimizer"
+version = "0.1.0"
+description = "Fantasy Premier League expected-points model and integer-programming squad/transfer optimizer"
+authors = [{ name = "Saafir Hale" }]
+requires-python = ">=3.11"
+dependencies = [
+    "pulp>=2.8,<3",  # 3.x+ no longer bundles the CBC solver binary
+    "pandas>=2.1",
+    "numpy>=1.26",
+    "requests>=2.31",
+    "truststore>=0.9",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[project.scripts]
+fplopt = "fplopt.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["fplopt*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,593 @@
+{
+  "best": {
+    "shrink_minutes": 450.0,
+    "prev_fade_max": 0.5,
+    "prev_fade_min": 0.15,
+    "goal_xg_weight": 0.85,
+    "assist_xa_weight": 0.85,
+    "minutes_decay": 0.6,
+    "minutes_prior_weight": 1.0,
+    "prev_minutes_k": 5.0,
+    "team_prior_matches": 8.0,
+    "dc_prior_apps": 6.0,
+    "availability_recovery": 0.6
+  },
+  "best_score": {
+    "rmse": 1.9261442524986785,
+    "mae": 1.03884174238675,
+    "pearson": 0.5754340459768434,
+    "spearman_per_gw": 0.6920765484939808
+  },
+  "log": [
+    {
+      "params": {
+        "shrink_minutes": 900.0,
+        "prev_fade_max": 0.5,
+        "prev_fade_min": 0.15,
+        "goal_xg_weight": 0.85,
+        "assist_xa_weight": 0.85,
+        "minutes_decay": 0.7,
+        "minutes_prior_weight": 2.0,
+        "prev_minutes_k": 5.0,
+        "team_prior_matches": 8.0,
+        "dc_prior_apps": 6.0,
+        "availability_recovery": 0.6
+      },
+      "rmse": 1.9478169047521263,
+      "mae": 1.0700396286743628,
+      "pearson": 0.5633057033045767,
+      "spearman_per_gw": 0.6769398212759098
+    },
+    {
+      "params": {
+        "shrink_minutes": 900.0,
+        "prev_fade_max": 0.5,
+        "prev_fade_min": 0.15,
+        "goal_xg_weight": 0.85,
+        "assist_xa_weight": 0.85,
+        "minutes_decay": 0.5,
+        "minutes_prior_weight": 2.0,
+        "prev_minutes_k": 5.0,
+        "team_prior_matches": 8.0,
+        "dc_prior_apps": 6.0,
+        "availability_recovery": 0.6
+      },
+      "rmse": 1.9612649529847264,
+      "mae": 1.090717465817263,
+      "pearson": 0.5554029081932371,
+      "spearman_per_gw": 0.6650015994174657
+    },
+    {
+      "params": {
+        "shrink_minutes": 900.0,
+        "prev_fade_max": 0.5,
+        "prev_fade_min": 0.15,
+        "goal_xg_weight": 0.85,
+        "assist_xa_weight": 0.85,
+        "minutes_decay": 0.6,
+        "minutes_prior_weight": 2.0,
+        "prev_minutes_k": 5.0,
+        "team_prior_matches": 8.0,
+        "dc_prior_apps": 6.0,
+        "availability_recovery": 0.6
+      },
+      "rmse": 1.9535878468776853,
+      "mae": 1.0800666442864293,
+      "pearson": 0.5601193879281857,
+      "spearman_per_gw": 0.6718936166916628
+    },
+    {
+      "params": {
+        "shrink_minutes": 900.0,
+        "prev_fade_max": 0.5,
+        "prev_fade_min": 0.15,
+        "goal_xg_weight": 0.85,
+        "assist_xa_weight": 0.85,
+        "minutes_decay": 0.8,
+        "minutes_prior_weight": 2.0,
+        "prev_minutes_k": 5.0,
+        "team_prior_matches": 8.0,
+        "dc_prior_apps": 6.0,
+        "availability_recovery": 0.6
+      },
+      "rmse": 1.9463714965531744,
+      "mae": 1.062552011849753,
+      "pearson": 0.5634385714211624,
+      "spearman_per_gw": 0.6786638424074417
+    },
+    {
+      "params": {
+        "shrink_minutes": 900.0,
+        "prev_fade_max": 0.5,
+        "prev_fade_min": 0.15,
+        "goal_xg_weight": 0.85,
+        "assist_xa_weight": 0.85,
+        "minutes_decay": 0.8,
+        "minutes_prior_weight": 1.0,
+        "prev_minutes_k": 5.0,
+        "team_prior_matches": 8.0,
+        "dc_prior_apps": 6.0,
+        "availability_recovery": 0.6
+      },
+      "rmse": 1.933072554953478,
+      "mae": 1.0354554185521252,
+      "pearson": 0.5705225512335373,
+      "spearman_per_gw": 0.6892046356552463
+    },
+    {
+      "params": {
+        "shrink_minutes": 900.0,
+        "prev_fade_max": 0.5,
+        "prev_fade_min": 0.15,
+        "goal_xg_weight": 0.85,
+        "assist_xa_weight": 0.85,
+        "minutes_decay": 0.8,
+        "minutes_prior_weight": 2.0,
+        "prev_minutes_k": 5.0,
+        "team_prior_matches": 8.0,
+        "dc_prior_apps": 6.0,
+        "availability_recovery": 0.6
+      },
+      "rmse": 1.9463714965531744,
+      "mae": 1.062552011849753,
+      "pearson": 0.5634385714211624,
+      "spearman_per_gw": 0.6786638424074417
+    },
+    {
+      "params": {
+        "shrink_minutes": 900.0,
+        "prev_fade_max": 0.5,
+        "prev_fade_min": 0.15,
+        "goal_xg_weight": 0.85,
+        "assist_xa_weight": 0.85,
+        "minutes_decay": 0.8,
+        "minutes_prior_weight": 3.0,
+        "prev_minutes_k": 5.0,
+        "team_prior_matches": 8.0,
+        "dc_prior_apps": 6.0,
+        "availability_recovery": 0.6
+      },
+      "rmse": 1.9613880179725527,
+      "mae": 1.0848161170237545,
+      "pearson": 0.5546567031012375,
+      "spearman_per_gw": 0.6665506982860009
+    },
+    {
+      "params": {
+        "shrink_minutes": 450.0,
+        "prev_fade_max": 0.5,
+        "prev_fade_min": 0.15,
+        "goal_xg_weight": 0.85,
+        "assist_xa_weight": 0.85,
+        "minutes_decay": 0.8,
+        "minutes_prior_weight": 1.0,
+        "prev_minutes_k": 5.0,
+        "team_prior_matches": 8.0,
+        "dc_prior_apps": 6.0,
+        "availability_recovery": 0.6
+      },
+      "rmse": 1.9325586033036308,
+      "mae": 1.0350193665730625,
+      "pearson": 0.5707992532734594,
+      "spearman_per_gw": 0.6889948761633947
+    },
+    {
+      "params": {
+        "shrink_minutes": 900.0,
+        "prev_fade_max": 0.5,
+        "prev_fade_min": 0.15,
+        "goal_xg_weight": 0.85,
+        "assist_xa_weight": 0.85,
+        "minutes_decay": 0.8,
+        "minutes_prior_weight": 1.0,
+        "prev_minutes_k": 5.0,
+        "team_prior_matches": 8.0,
+        "dc_prior_apps": 6.0,
+        "availability_recovery": 0.6
+      },
+      "rmse": 1.933072554953478,
+      "mae": 1.0354554185521252,
+      "pearson": 0.5705225512335373,
+      "spearman_per_gw": 0.6892046356552463
+    },
+    {
+      "params": {
+        "shrink_minutes": 1800.0,
+        "prev_fade_max": 0.5,
+        "prev_fade_min": 0.15,
+        "goal_xg_weight": 0.85,
+        "assist_xa_weight": 0.85,
+        "minutes_decay": 0.8,
+        "minutes_prior_weight": 1.0,
+        "prev_minutes_k": 5.0,
+        "team_prior_matches": 8.0,
+        "dc_prior_apps": 6.0,
+        "availability_recovery": 0.6
+      },
+      "rmse": 1.934349853423903,
+      "mae": 1.036393412596325,
+      "pearson": 0.5697478181165572,
+      "spearman_per_gw": 0.6893053185213318
+    },
+    {
+      "params": {
+        "shrink_minutes": 450.0,
+        "prev_fade_max": 0.5,
+        "prev_fade_min": 0.15,
+        "goal_xg_weight": 0.7,
+        "assist_xa_weight": 0.85,
+        "minutes_decay": 0.8,
+        "minutes_prior_weight": 1.0,
+        "prev_minutes_k": 5.0,
+        "team_prior_matches": 8.0,
+        "dc_prior_apps": 6.0,
+        "availability_recovery": 0.6
+      },
+      "rmse": 1.9326523289673034,
+      "mae": 1.0349511826694333,
+      "pearson": 0.5707070594616863,
+      "spearman_per_gw": 0.6889116428171221
+    },
+    {
+      "params": {
+        "shrink_minutes": 450.0,
+        "prev_fade_max": 0.5,
+        "prev_fade_min": 0.15,
+        "goal_xg_weight": 1.0,
+        "assist_xa_weight": 0.85,
+        "minutes_decay": 0.8,
+        "minutes_prior_weight": 1.0,
+        "prev_minutes_k": 5.0,
+        "team_prior_matches": 8.0,
+        "dc_prior_apps": 6.0,
+        "availability_recovery": 0.6
+      },
+      "rmse": 1.932627418466113,
+      "mae": 1.0351729889652337,
+      "pearson": 0.5707870767869434,
+      "spearman_per_gw": 0.6890566072796641
+    },
+    {
+      "params": {
+        "shrink_minutes": 450.0,
+        "prev_fade_max": 0.5,
+        "prev_fade_min": 0.15,
+        "goal_xg_weight": 0.85,
+        "assist_xa_weight": 0.85,
+        "minutes_decay": 0.8,
+        "minutes_prior_weight": 1.0,
+        "prev_minutes_k": 5.0,
+        "team_prior_matches": 4.0,
+        "dc_prior_apps": 6.0,
+        "availability_recovery": 0.6
+      },
+      "rmse": 1.9329841866562014,
+      "mae": 1.0366497598803222,
+      "pearson": 0.5705257960417999,
+      "spearman_per_gw": 0.6888314750901328
+    },
+    {
+      "params": {
+        "shrink_minutes": 450.0,
+        "prev_fade_max": 0.5,
+        "prev_fade_min": 0.15,
+        "goal_xg_weight": 0.85,
+        "assist_xa_weight": 0.85,
+        "minutes_decay": 0.8,
+        "minutes_prior_weight": 1.0,
+        "prev_minutes_k": 5.0,
+        "team_prior_matches": 16.0,
+        "dc_prior_apps": 6.0,
+        "availability_recovery": 0.6
+      },
+      "rmse": 1.9326257327539602,
+      "mae": 1.033596106629937,
+      "pearson": 0.5707597801969331,
+      "spearman_per_gw": 0.6891129929203004
+    },
+    {
+      "params": {
+        "shrink_minutes": 450.0,
+        "prev_fade_max": 0.35,
+        "prev_fade_min": 0.15,
+        "goal_xg_weight": 0.85,
+        "assist_xa_weight": 0.85,
+        "minutes_decay": 0.8,
+        "minutes_prior_weight": 1.0,
+        "prev_minutes_k": 5.0,
+        "team_prior_matches": 8.0,
+        "dc_prior_apps": 6.0,
+        "availability_recovery": 0.6
+      },
+      "rmse": 1.9326766349245206,
+      "mae": 1.0347688037739495,
+      "pearson": 0.5707216938366431,
+      "spearman_per_gw": 0.6890883814316628
+    },
+    {
+      "params": {
+        "shrink_minutes": 450.0,
+        "prev_fade_max": 0.75,
+        "prev_fade_min": 0.15,
+        "goal_xg_weight": 0.85,
+        "assist_xa_weight": 0.85,
+        "minutes_decay": 0.8,
+        "minutes_prior_weight": 1.0,
+        "prev_minutes_k": 5.0,
+        "team_prior_matches": 8.0,
+        "dc_prior_apps": 6.0,
+        "availability_recovery": 0.6
+      },
+      "rmse": 1.9325433083555392,
+      "mae": 1.0354148238149425,
+      "pearson": 0.5708118778326815,
+      "spearman_per_gw": 0.6888402283252087
+    },
+    {
+      "params": {
+        "shrink_minutes": 450.0,
+        "prev_fade_max": 0.5,
+        "prev_fade_min": 0.15,
+        "goal_xg_weight": 0.85,
+        "assist_xa_weight": 0.85,
+        "minutes_decay": 0.5,
+        "minutes_prior_weight": 1.0,
+        "prev_minutes_k": 5.0,
+        "team_prior_matches": 8.0,
+        "dc_prior_apps": 6.0,
+        "availability_recovery": 0.6
+      },
+      "rmse": 1.9282997048285857,
+      "mae": 1.0447717692373453,
+      "pearson": 0.5744041714538681,
+      "spearman_per_gw": 0.6897307889869811
+    },
+    {
+      "params": {
+        "shrink_minutes": 450.0,
+        "prev_fade_max": 0.5,
+        "prev_fade_min": 0.15,
+        "goal_xg_weight": 0.85,
+        "assist_xa_weight": 0.85,
+        "minutes_decay": 0.6,
+        "minutes_prior_weight": 1.0,
+        "prev_minutes_k": 5.0,
+        "team_prior_matches": 8.0,
+        "dc_prior_apps": 6.0,
+        "availability_recovery": 0.6
+      },
+      "rmse": 1.9261442524986785,
+      "mae": 1.03884174238675,
+      "pearson": 0.5754340459768434,
+      "spearman_per_gw": 0.6920765484939808
+    },
+    {
+      "params": {
+        "shrink_minutes": 450.0,
+        "prev_fade_max": 0.5,
+        "prev_fade_min": 0.15,
+        "goal_xg_weight": 0.85,
+        "assist_xa_weight": 0.85,
+        "minutes_decay": 0.7,
+        "minutes_prior_weight": 1.0,
+        "prev_minutes_k": 5.0,
+        "team_prior_matches": 8.0,
+        "dc_prior_apps": 6.0,
+        "availability_recovery": 0.6
+      },
+      "rmse": 1.9269053892894663,
+      "mae": 1.0348859538912953,
+      "pearson": 0.5746201697519591,
+      "spearman_per_gw": 0.692236305089405
+    },
+    {
+      "params": {
+        "shrink_minutes": 450.0,
+        "prev_fade_max": 0.5,
+        "prev_fade_min": 0.15,
+        "goal_xg_weight": 0.85,
+        "assist_xa_weight": 0.85,
+        "minutes_decay": 0.8,
+        "minutes_prior_weight": 1.0,
+        "prev_minutes_k": 5.0,
+        "team_prior_matches": 8.0,
+        "dc_prior_apps": 6.0,
+        "availability_recovery": 0.6
+      },
+      "rmse": 1.9325586033036308,
+      "mae": 1.0350193665730625,
+      "pearson": 0.5707992532734594,
+      "spearman_per_gw": 0.6889948761633947
+    },
+    {
+      "params": {
+        "shrink_minutes": 450.0,
+        "prev_fade_max": 0.5,
+        "prev_fade_min": 0.15,
+        "goal_xg_weight": 0.85,
+        "assist_xa_weight": 0.85,
+        "minutes_decay": 0.6,
+        "minutes_prior_weight": 2.0,
+        "prev_minutes_k": 5.0,
+        "team_prior_matches": 8.0,
+        "dc_prior_apps": 6.0,
+        "availability_recovery": 0.6
+      },
+      "rmse": 1.952925443673105,
+      "mae": 1.0797088509371033,
+      "pearson": 0.5604807754963319,
+      "spearman_per_gw": 0.671170606855504
+    },
+    {
+      "params": {
+        "shrink_minutes": 450.0,
+        "prev_fade_max": 0.5,
+        "prev_fade_min": 0.15,
+        "goal_xg_weight": 0.85,
+        "assist_xa_weight": 0.85,
+        "minutes_decay": 0.6,
+        "minutes_prior_weight": 3.0,
+        "prev_minutes_k": 5.0,
+        "team_prior_matches": 8.0,
+        "dc_prior_apps": 6.0,
+        "availability_recovery": 0.6
+      },
+      "rmse": 1.9779661254119099,
+      "mae": 1.1102538164489393,
+      "pearson": 0.5445219845217588,
+      "spearman_per_gw": 0.6500611133648083
+    },
+    {
+      "params": {
+        "shrink_minutes": 900.0,
+        "prev_fade_max": 0.5,
+        "prev_fade_min": 0.15,
+        "goal_xg_weight": 0.85,
+        "assist_xa_weight": 0.85,
+        "minutes_decay": 0.6,
+        "minutes_prior_weight": 1.0,
+        "prev_minutes_k": 5.0,
+        "team_prior_matches": 8.0,
+        "dc_prior_apps": 6.0,
+        "availability_recovery": 0.6
+      },
+      "rmse": 1.9266956251599268,
+      "mae": 1.0392579837635794,
+      "pearson": 0.5751492934733299,
+      "spearman_per_gw": 0.6924421535096914
+    },
+    {
+      "params": {
+        "shrink_minutes": 1800.0,
+        "prev_fade_max": 0.5,
+        "prev_fade_min": 0.15,
+        "goal_xg_weight": 0.85,
+        "assist_xa_weight": 0.85,
+        "minutes_decay": 0.6,
+        "minutes_prior_weight": 1.0,
+        "prev_minutes_k": 5.0,
+        "team_prior_matches": 8.0,
+        "dc_prior_apps": 6.0,
+        "availability_recovery": 0.6
+      },
+      "rmse": 1.9280267082698972,
+      "mae": 1.0401858855701538,
+      "pearson": 0.5743283651147166,
+      "spearman_per_gw": 0.692441814804473
+    },
+    {
+      "params": {
+        "shrink_minutes": 450.0,
+        "prev_fade_max": 0.5,
+        "prev_fade_min": 0.15,
+        "goal_xg_weight": 0.7,
+        "assist_xa_weight": 0.85,
+        "minutes_decay": 0.6,
+        "minutes_prior_weight": 1.0,
+        "prev_minutes_k": 5.0,
+        "team_prior_matches": 8.0,
+        "dc_prior_apps": 6.0,
+        "availability_recovery": 0.6
+      },
+      "rmse": 1.9261866504038603,
+      "mae": 1.0387179750793614,
+      "pearson": 0.5753469529278096,
+      "spearman_per_gw": 0.692035501024104
+    },
+    {
+      "params": {
+        "shrink_minutes": 450.0,
+        "prev_fade_max": 0.5,
+        "prev_fade_min": 0.15,
+        "goal_xg_weight": 1.0,
+        "assist_xa_weight": 0.85,
+        "minutes_decay": 0.6,
+        "minutes_prior_weight": 1.0,
+        "prev_minutes_k": 5.0,
+        "team_prior_matches": 8.0,
+        "dc_prior_apps": 6.0,
+        "availability_recovery": 0.6
+      },
+      "rmse": 1.9262599791132995,
+      "mae": 1.0390306035134764,
+      "pearson": 0.5754148303336323,
+      "spearman_per_gw": 0.6921162806993764
+    },
+    {
+      "params": {
+        "shrink_minutes": 450.0,
+        "prev_fade_max": 0.5,
+        "prev_fade_min": 0.15,
+        "goal_xg_weight": 0.85,
+        "assist_xa_weight": 0.85,
+        "minutes_decay": 0.6,
+        "minutes_prior_weight": 1.0,
+        "prev_minutes_k": 5.0,
+        "team_prior_matches": 4.0,
+        "dc_prior_apps": 6.0,
+        "availability_recovery": 0.6
+      },
+      "rmse": 1.9264341902341517,
+      "mae": 1.040478493049395,
+      "pearson": 0.5752128218422409,
+      "spearman_per_gw": 0.6918424201428157
+    },
+    {
+      "params": {
+        "shrink_minutes": 450.0,
+        "prev_fade_max": 0.5,
+        "prev_fade_min": 0.15,
+        "goal_xg_weight": 0.85,
+        "assist_xa_weight": 0.85,
+        "minutes_decay": 0.6,
+        "minutes_prior_weight": 1.0,
+        "prev_minutes_k": 5.0,
+        "team_prior_matches": 16.0,
+        "dc_prior_apps": 6.0,
+        "availability_recovery": 0.6
+      },
+      "rmse": 1.926350524423703,
+      "mae": 1.0374328804118182,
+      "pearson": 0.5753270561663488,
+      "spearman_per_gw": 0.6921931994072624
+    },
+    {
+      "params": {
+        "shrink_minutes": 450.0,
+        "prev_fade_max": 0.35,
+        "prev_fade_min": 0.15,
+        "goal_xg_weight": 0.85,
+        "assist_xa_weight": 0.85,
+        "minutes_decay": 0.6,
+        "minutes_prior_weight": 1.0,
+        "prev_minutes_k": 5.0,
+        "team_prior_matches": 8.0,
+        "dc_prior_apps": 6.0,
+        "availability_recovery": 0.6
+      },
+      "rmse": 1.9262456713677298,
+      "mae": 1.0385797104095336,
+      "pearson": 0.575369036371514,
+      "spearman_per_gw": 0.6921959436404017
+    },
+    {
+      "params": {
+        "shrink_minutes": 450.0,
+        "prev_fade_max": 0.75,
+        "prev_fade_min": 0.15,
+        "goal_xg_weight": 0.85,
+        "assist_xa_weight": 0.85,
+        "minutes_decay": 0.6,
+        "minutes_prior_weight": 1.0,
+        "prev_minutes_k": 5.0,
+        "team_prior_matches": 8.0,
+        "dc_prior_apps": 6.0,
+        "availability_recovery": 0.6
+      },
+      "rmse": 1.926160741586833,
+      "mae": 1.0392421693288283,
+      "pearson": 0.575420473259263,
+      "spearman_per_gw": 0.6919762044849662
+    }
+  ]
+}
