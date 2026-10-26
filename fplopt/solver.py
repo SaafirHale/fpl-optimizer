@@ -61,6 +61,7 @@ class Settings:
     vice_weight: float = 0.05
     ft_value: float = 1.5  # points credited per free transfer still banked after the horizon
     transfer_friction: float = 0.01  # tiny cost per transfer so equal-value swaps are skipped
+    hit_margin: float = 0.0  # extra objective cost per hit on top of the real -4 (projection noise guard)
     banned: set = field(default_factory=set)
     forced: set = field(default_factory=set)  # must be in the squad every planned week
     sold: set = field(default_factory=set)  # owned players that must go in the first week
@@ -154,7 +155,7 @@ def solve(cands: list[Candidate], st: Settings, rules: Rules = Rules()) -> Plan:
         obj += [w * xp[i, t] * (s[i, t] + cap_extra * c[i, t] + st.vice_weight * v[i, t]) for i in ids]
         obj += [w * xp[i, t] * bw[k] * b[i, t, k] for i in outfield for k in range(3)]
         obj += [w * xp[i, t] * gkw * (squad(i, t) - s[i, t]) for i in gks]
-        obj += [-rules.hit_cost * pen[t] - st.transfer_friction * nt[t]]
+        obj += [-(rules.hit_cost + st.hit_margin) * pen[t] - st.transfer_friction * nt[t]]
     obj.append(st.ft_value * ft[len(gws)])
     prob += pulp.lpSum(obj)
 
