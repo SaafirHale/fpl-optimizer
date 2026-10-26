@@ -12,7 +12,7 @@ Baselines, computed with the same no-lookahead rule:
 
 The dataset's same-gameweek xP column is not usable as a baseline: it was recorded after the
 gameweek and leaks its result (see `leakage_check`). Its correlation with points falls from
-0.685 this week to 0.453 next week on 2024/25, while honest forecasts lose about 0.03-0.06.
+0.731 this week to 0.479 next week on 2024/25, while honest forecasts lose 0.025-0.059.
 """
 
 from __future__ import annotations
