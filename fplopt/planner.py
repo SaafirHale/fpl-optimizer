@@ -75,6 +75,7 @@ def why(plan: Plan, cands: list[Candidate], st: Settings, rules: Rules, ids: lis
     out = []
     base = set(plan.first.squad)
     owned = {c.id for c in cands if c.owned} if not st.draft else set()
+    pos = {c.id: c.pos for c in cands}
     for i in ids:
         if i in owned:  # an owned player cannot vanish: make the plan sell him this week instead
             alt_st = replace(st, sold=set(st.sold) | {i}, forced=set(st.forced) - {i})
@@ -85,5 +86,7 @@ def why(plan: Plan, cands: list[Candidate], st: Settings, rules: Rules, ids: lis
         except InfeasibleError:
             out.append(Why(i, float("inf"), []))
             continue
-        out.append(Why(i, plan.objective - alt.objective, sorted(set(alt.first.squad) - base)))
+        new = set(alt.first.squad) - base
+        # same-position replacements first; other changes are the solver rebalancing the budget
+        out.append(Why(i, plan.objective - alt.objective, sorted(new, key=lambda j: (pos[j] != pos[i], j))))
     return out
