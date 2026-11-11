@@ -67,6 +67,16 @@ def main():
             out += [f"Against FPL's own expected points (the previous gameweek's snapshot, the latest one recorded "
                     f"before the deadline), on the {h2h['rows']:,} rows where the dataset has it:", "",
                     accuracy_table(h2h, ("model", "fpl_lag", "form")), ""]
+    live = sorted(R.glob("backtest-2026-27-gw*.json"))
+    if live:
+        lv = json.loads(live[-1].read_text())
+        out += [f"## Current season so far: 2026/27 GW{lv['season'].split('gw')[1]} "
+                f"({lv['rows']:,} player-gameweeks)", "",
+                "Same walk-forward rule, built from the live FPL API (`fplopt backtest live`). Rows are priced as of "
+                "each gameweek from Valuo's nightly snapshot (the latest earlier price where the local copy ends), "
+                "because today's prices already reflect this season's results. Ten gameweeks is a small sample, "
+                "especially for the top-pick column.", "",
+                accuracy_table(lv), ""]
     if val:
         out += [f"## Validation season: 2024/25 ({val['rows']:,} player-gameweeks)", "", accuracy_table(val), ""]
         h2h = val.get("vs_fpl_lag")

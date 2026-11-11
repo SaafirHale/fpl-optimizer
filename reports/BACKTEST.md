@@ -41,6 +41,16 @@ Against FPL's own expected points (the previous gameweek's snapshot, the latest 
 | FPL xP, previous GW snapshot | 1.175 | 2.197 | 0.478 | 0.649 | 0.254 | 4.70 |
 | Form (last 4 GWs) | 1.079 | 2.187 | 0.490 | 0.732 | 0.250 | 5.30 |
 
+## Current season so far: 2026/27 GW1-10 (6,558 player-gameweeks)
+
+Same walk-forward rule, built from the live FPL API (`fplopt backtest live`). Rows are priced as of each gameweek from Valuo's nightly snapshot (the latest earlier price where the local copy ends), because today's prices already reflect this season's results. Ten gameweeks is a small sample, especially for the top-pick column.
+
+| Projection | MAE | RMSE | Pearson r | Rank corr. per GW | Top-50 overlap | Top pick's actual pts |
+|---|---:|---:|---:|---:|---:|---:|
+| This model | 1.216 | 2.112 | 0.547 | 0.669 | 0.308 | 8.10 |
+| Form (last 4 GWs) | 1.284 | 2.390 | 0.455 | 0.638 | 0.264 | 3.10 |
+| Points per match so far | 1.281 | 2.365 | 0.459 | 0.637 | 0.264 | 3.10 |
+
 ## Validation season: 2024/25 (26,919 player-gameweeks)
 
 | Projection | MAE | RMSE | Pearson r | Rank corr. per GW | Top-50 overlap | Top pick's actual pts |

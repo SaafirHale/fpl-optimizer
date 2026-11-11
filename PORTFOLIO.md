@@ -30,7 +30,8 @@ RMSE was 1.960, against 2.157 for recent form and 2.088 for points per match so 
 correlation with actual points was 0.572, against 0.499 and 0.509. Against FPL's own expected
 points recorded before each deadline, it scored RMSE 1.936 vs 2.197 on the 7,452 rows where
 FPL's number exists. It does not win everything: its top pick each week averaged 5.74 real
-points, behind 6.26 for "highest points per match so far".
+points, behind 6.26 for "highest points per match so far". The lead held on the first ten
+gameweeks of 2026/27, scored as they were played: RMSE 2.112 vs 2.390 for form.
 
 I also replayed the whole of 2025/26 through the optimizer, deadline by deadline, carrying
 the squad, bank, selling prices and free transfers forward and scoring real points with

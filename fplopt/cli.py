@@ -191,13 +191,19 @@ def cmd_backtest(a) -> None:
 
     out = ROOT / "reports"
     for season in a.seasons:
-        prev = PREV_OF.get(season)
-        for s in [season, prev]:
+        live = season == "live"
+        prev = "2025-26" if live else PREV_OF.get(season)
+        for s in ([prev] if live else [season, prev]):
             if s and not (RAW / s / "merged_gw.csv").exists():
                 print(f"downloading {s} history...")
                 fetch_history(s)
         t0 = time.time()
-        df = backtest.run(season, Params())
+        if live:
+            cur, done = backtest.live_season()
+            season = f"{cur.name}-gw{done[0]}-{done[-1]}"
+            df = backtest.run_season(cur, load_history(prev), Params())
+        else:
+            df = backtest.run(season, Params())
         m = backtest.save(df, season, Params(), out)
         print(f"{season}: {m['rows']} player-gameweeks, {time.time() - t0:.0f}s -> reports/backtest-{season}.json")
         for name in backtest.MODELS:
@@ -263,7 +269,7 @@ def main(argv: list[str] | None = None) -> None:
     p.add_argument("--ft", type=int)
     p.set_defaults(fn=cmd_chips)
 
-    p = sub.add_parser("backtest", help="walk-forward backtest of the projections")
+    p = sub.add_parser("backtest", help="walk-forward backtest of the projections ('live' = this season so far)")
     p.add_argument("seasons", nargs="*", default=["2024-25", "2025-26"])
     p.set_defaults(fn=cmd_backtest)
 

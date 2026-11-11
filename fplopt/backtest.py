@@ -90,6 +90,40 @@ def run(season_name: str = "2025-26", params: Params = Params(), gws: range | No
     season = load_history(season_name)
     prev_name = PREV_OF.get(season_name)
     prev = load_history(prev_name) if prev_name and (ROOT / "data" / "raw" / prev_name).exists() else None
+    return run_season(season, prev, params, gws, verbose)
+
+
+def live_season() -> tuple[Season, list]:
+    """The current season, finished gameweeks only, priced as of each gameweek.
+
+    Live rows carry today's price, which already reflects this season's results (lookahead in
+    the price prior). Each row is re-priced from Valuo's nightly snapshot (read-only) at that
+    gameweek, or at the latest earlier gameweek the local snapshot has. An older price is still
+    known before the deadline. Players missing from the snapshot are left out.
+    """
+    from .data import load_live
+    from .team import _snapshot_prices
+
+    s = load_live()
+    prices = _snapshot_prices()
+    fx = s.fixtures
+    done = sorted(g for g, d in fx.groupby("gw") if d.finished.all())
+    rows = s.rows[s.rows.gw.isin(done) & s.rows.element.isin(prices)].copy()
+
+    def priced(el, gw):
+        by_round = prices[el]
+        known = [r for r in by_round if r <= gw]
+        return by_round[max(known)] if known else None
+
+    rows["price"] = [priced(e, g) for e, g in zip(rows.element, rows.gw)]
+    rows = rows.dropna(subset=["price"])
+    rows["price"] = rows.price.astype(int)
+    s.rows = rows
+    return s, done
+
+
+def run_season(season: Season, prev: Season | None, params: Params = Params(), gws=None,
+               verbose: bool = False) -> pd.DataFrame:
     base = baselines(season, prev)
     out = []
     gws = gws or range(1, int(season.rows.gw.max()) + 1)

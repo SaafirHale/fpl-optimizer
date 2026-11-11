@@ -18,6 +18,9 @@ Projections are backtested walk-forward on a hold-out season. See
 Against FPL's own expected points (the snapshot recorded before each deadline, on the 7,452
 rows of 2025/26 where the dataset has one): RMSE 1.936 vs 2.197, r 0.575 vs 0.478.
 
+**This season so far** (2026/27 GW1–10, 6,558 player-gameweeks, same walk-forward rule):
+RMSE 2.112 vs 2.390 for form and 2.365 for points per match; r 0.547 vs 0.455 and 0.459.
+
 **Season replay.** The optimizer played every week of 2025/26, using only data from before
 each deadline, with squad, bank, selling prices and free transfers carried forward and real
 points scored. It finished on 2,005 points with the model, against 1,894 for the same solver
