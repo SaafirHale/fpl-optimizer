@@ -14,13 +14,15 @@ Both are printed so they can be checked against the FPL app, and `--ft` override
 from __future__ import annotations
 
 import json
+import os
 from dataclasses import dataclass, field
 from pathlib import Path
 
 from . import api
 from .rules import Rules, selling_price
 
-VALUO_SNAPSHOT = Path("C:/Users/Atisuto/valuo/data/fpl-snapshot.json")
+# Valuo (a sibling repo) commits a nightly FPL snapshot; read-only. Override with VALUO_SNAPSHOT.
+VALUO_SNAPSHOT = Path(os.environ.get("VALUO_SNAPSHOT", Path(__file__).resolve().parents[2] / "valuo" / "data" / "fpl-snapshot.json"))
 
 
 @dataclass

@@ -1,7 +1,7 @@
 # Proposal: bring the optimizer into Valuo
 
 Nothing here has been changed in the Valuo repo. This file describes how the integration could
-work, for whoever next works in `C:\Users\Atisuto\valuo`.
+work, for whoever next works in the Valuo repo.
 
 ## What Valuo already has
 
