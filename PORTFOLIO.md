@@ -2,6 +2,7 @@
 
 - **slug:** fpl-optimizer
 - **category:** quant
+- **repo:** https://github.com/SaafirHale/fpl-optimizer
 - **title:** FPL Optimizer
 - **blurb:** Expected points for every Fantasy Premier League player, and an integer program that
   picks the squad, transfers, captain and chips under the game's rules. Walk-forward
